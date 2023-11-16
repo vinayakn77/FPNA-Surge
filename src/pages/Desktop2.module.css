@@ -1,0 +1,120 @@
+.cards1Icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 720.1px;
+  height: 1080px;
+  object-fit: cover;
+}
+.desktop2Child,
+.step1UploadThe {
+  position: absolute;
+  top: 117px;
+  left: 875px;
+}
+.desktop2Child {
+  cursor: pointer;
+  top: 194px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkgray);
+  width: 240px;
+  height: 45px;
+}
+.upload {
+  cursor: pointer;
+  position: absolute;
+  top: 198px;
+  left: 947px;
+  font-size: var(--font-size-9xl);
+  color: var(--color-gray);
+}
+
+.uploadprogress {
+  position: absolute;
+  top: 198px;
+  left: 1150px;
+  font-size: var(--font-size-9xl);
+  color: var(--color-gray);
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+
+.desktop2Item,
+.step2GenerateThe {
+  position: absolute;
+  top: 307px;
+  left: 875px;
+}
+.desktop2Item {
+  cursor: pointer;
+  top: 388px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkgray);
+  width: 240px;
+  height: 45px;
+}
+.generate {
+  cursor: pointer;
+  position: absolute;
+  top: 390px;
+  left: 934px;
+  font-size: var(--font-size-9xl);
+  color: var(--color-gray);
+}
+.desktop2Inner,
+.step3DownloadThe {
+  cursor: pointer;
+  position: absolute;
+  top: 528px;
+  left: 875px;
+}
+.desktop2Inner {
+  top: 611px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkgray);
+  width: 240px;
+  height: 45px;
+}
+.download {
+  cursor: pointer;
+  position: absolute;
+  top: 613px;
+  left: 926px;
+  font-size: var(--font-size-9xl);
+  color: var(--color-gray);
+}
+.rectangleDiv,
+.step4CreateThe {
+  position: absolute;
+  top: 706px;
+  left: 875px;
+}
+.rectangleDiv {
+  cursor: pointer;
+  top: 791px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkgray);
+  width: 240px;
+  height: 45px;
+}
+.summarize {
+  cursor: pointer;
+  position: absolute;
+  top: 793px;
+  left: 910px;
+  font-size: var(--font-size-9xl);
+  color: var(--color-gray);
+}
+.desktop2 {
+  position: fixed;
+  background-color: var(--color-black);
+  top: -30px;
+  width: 100%;
+  height: 1080px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-white);
+  font-family: var(--font-secular-one);
+}

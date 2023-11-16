@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One:wght@400&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-secular-one: "Secular One";
+
+  /* font sizes */
+  --font-size-9xl: 28px;
+  --font-size-13xl: 32px;
+
+  /* Colors */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #020000;
+  --color-darkgray: #a59898;
+
+  /* Border radiuses */
+  --br-3xs: 10px;
+}
