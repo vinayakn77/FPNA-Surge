@@ -8,15 +8,13 @@ const Desktop3 = () => {
     { id: "Payment Rate", values: [0.000, 0.000, 0.000] },
     { id: "Merchant Sales", values: [0.000, 0.000, 0.000] },
     { id: "Credit Penetration", values: [0.000, 0.000, 0.000] },
-    { id: "Transaction K", values: [0.000, 0.000, 0.000] },
+    { id: "Transaction", values: [0.000, 0.000, 0.000] },
     { id: "Applications", values: [0.000, 0.000, 0.000] },
     { id: "Approval Rate", values: [0.000, 0.000, 0.000] },
     { id: "Active Rate", values: [0.000, 0.000, 0.000] },
     { id: "Floating APR", values: [0.000, 0.000, 0.000] },
     { id: "Fixed APR", values: [0.000, 0.000, 0.000] },
     { id: "Promo APR", values: [0.000, 0.000, 0.000] },
-
-    // Add more rows as needed
   ];
 
   const [rowData, setRowData] = useState(initialData);
@@ -61,7 +59,8 @@ const Desktop3 = () => {
       return prevData.map((row) => {
         if (row.id === rowId) {
           const updatedValues = [...row.values];
-          updatedValues[columnIndex] = value;
+          // Check if the value is NaN, and set it to 0 in that case
+          updatedValues[columnIndex] = isNaN(value) ? 0 : value;
           return { ...row, values: updatedValues };
         }
         return row;
@@ -93,7 +92,7 @@ useEffect(()=>{
     <>
       <div className="container clearfix">
         <div className={styles.left_panel}>
-          <h1>Summarize Data</h1>
+          <h2>Enter the Input Parameters for Simulation</h2>
           <table>
             <thead>
               <tr>
@@ -110,7 +109,6 @@ useEffect(()=>{
                   {row.values.map((value, index) => (
                     <td key={index}>
                       <input
-                        type="number"
                         value={value}
                         onChange={(e) => handleInputChange(row.id, index, parseFloat(e.target.value))}
                       />
@@ -124,8 +122,8 @@ useEffect(()=>{
           <p>{rowData.message}</p>
         </div>
 
-
         <div className={styles.right_panel}>
+        <h2>Simulated Results based on the Input Parameters</h2>
           <table>
             <thead>
               <tr>
@@ -139,7 +137,7 @@ useEffect(()=>{
             <tbody>
 
               <tr>
-                <td>Internal Sales Summary</td>
+                <td>Internal Sales Summary (in $ Million)</td>
                 <td>{data.internal_sales_summary_bs}</td>
                 <td>{data.internal_sales_summary_1}</td>
                 <td>{data.internal_sales_summary_2}</td>
@@ -148,7 +146,7 @@ useEffect(()=>{
 
 
               <tr>
-                <td>External Sales Summary</td>
+                <td>External Sales Summary (in $ Million)</td>
                 <td>{data.external_sales_summary_bs}</td>
                 <td>{data.external_sales_summary_1}</td>
                 <td>{data.external_sales_summary_2}</td>
@@ -156,7 +154,7 @@ useEffect(()=>{
               </tr>
 
               <tr>
-                <td>Sales Summary</td>
+                <td>Sales Summary (in $ Million)</td>
                 <td>{data.sales_summary_bs}</td>
                 <td>{data.sales_summary_1}</td>
                 <td>{data.sales_summary_2}</td>
@@ -171,21 +169,21 @@ useEffect(()=>{
                 <td>{data.payment_rate_summary_3}</td>
               </tr>
               <tr>
-                <td>ENR Summary</td>
+                <td>ENR Summary (in $ Million)</td>
                 <td>{data.enr_summary_bs}</td>
                 <td>{data.enr_summary_1}</td>
                 <td>{data.enr_summary_2}</td>
                 <td>{data.enr_summary_3}</td>
               </tr>
               <tr>
-                <td>ANR Summary</td>
+                <td>ANR Summary (in $ Million)</td>
                 <td>{data.anr_summary_bs}</td>
                 <td>{data.anr_summary_1}</td>
                 <td>{data.anr_summary_2}</td>
                 <td>{data.anr_summary_3}</td>
               </tr>
               <tr>
-                <td>Merchant Sales Summary</td>
+                <td>Merchant Sales Summary (in $ Million)</td>
                 <td>{data.merchant_sales_summary_bs}</td>
                 <td>{data.merchant_sales_summary_1}</td>
                 <td>{data.merchant_sales_summary_2}</td>
@@ -199,7 +197,7 @@ useEffect(()=>{
                 <td>{data.credit_penetration_summary_3}</td>
               </tr>
               <tr>
-                <td>Transaction (K) Summary</td>
+                <td>Transaction Summary (in 1000)</td>
                 <td>{data.transactions_k_summary_bs}</td>
                 <td>{data.transactions_k_summary_1}</td>
                 <td>{data.transactions_k_summary_2}</td>
