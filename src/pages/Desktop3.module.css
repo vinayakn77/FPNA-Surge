@@ -20,7 +20,7 @@ th {
   border: 1.75px solid #020000;
 }
 
-input[type="number"] {
+input {
   width: 80px;
   padding: 5px;
   border: 1.75px solid #000000;
@@ -75,7 +75,6 @@ button{
 .right_panel{
   float: right;
   width: 45%;
-  margin-top: 2.2%;
   margin-right: 5%;
 }
 
